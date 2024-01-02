@@ -21,4 +21,4 @@ nums_id2 = nums_id.copy # it copys a value to other
 print(nums_id2)
 
 
-friends_for_life = ("ABD", "Aman", "Ashe", "Faya", "Boka", "Adam", "") #tuples - can not be alterd(imutable) also common for coordinates 
+friends_for_life = ("ABD", "Aman", "Ashe", "Faya", "Boka", "Adam",) #tuples - can not be alterd(imutable) also common for coordinates 

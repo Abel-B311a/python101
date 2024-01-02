@@ -19,3 +19,6 @@ nums_id.reverse() # it just the reverse the order of the values in a list
 print(nums_id)
 nums_id2 = nums_id.copy # it copys a value to other
 print(nums_id2)
+
+
+friends_for_life = ("ABD", "Aman", "Ashe", "Faya", "Boka", "Adam", "") #tuples - can not be alterd(imutable) also common for coordinates 

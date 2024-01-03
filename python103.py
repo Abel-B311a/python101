@@ -17,3 +17,10 @@ for i in range(2,5):
 friends = ["ABD", "Aman", "Ashe", "Faya"]
 for i in range(len(friends)):
   print(friends[i])
+
+
+two_d_nums = [[1,2],["a","b"]]
+print(two_d_nums[1][1])
+for first in two_d_nums:
+  for second in first:
+    print(second)

@@ -24,3 +24,27 @@ print(two_d_nums[1][1])
 for first in two_d_nums:
   for second in first:
     print(second)
+
+
+user_in = input("Insert a word: ")
+
+def translate(phrase):
+  translation = ""
+  for letters in phrase:
+    if letters in "Aa":
+      translation = translation + "za"
+    elif letters in "Ee":
+      translation = translation + "ze"
+    elif letters in "Ii":
+      translation = translation + "zi"
+    elif letters in "Oo":
+      translation = translation + "zo"
+    elif letters in "Uu":
+      translation = translation + "zu"
+    else:
+      translation = translation + letters
+  return translation
+
+print(translate(user_in))
+
+

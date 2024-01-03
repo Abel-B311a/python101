@@ -21,5 +21,5 @@ for item in pyfile.readlines():
 pyfile.close() # good practice to close it
 
 
-python101.py.write("\nBella is lela tarik")   # note: using a(append)each time we run the program it will add it to the file and \n to make it on new line
+#python101.py.write("\nBella is lela tarik")   # note: using a(append)each time we run the program it will add it to the file and \n to make it on new line
 # using "w", it will replace all the content of the file with the new value we write and if we choose to open new file name, it will create a file for it with the value added, u can use diffrent file types like .html

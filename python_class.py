@@ -4,3 +4,4 @@ class friends:
     self.year_met = year_met
     self.is_chis = is_chis
     self.is_gay = is_gay
+

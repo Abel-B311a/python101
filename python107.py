@@ -38,9 +38,13 @@ import re
 #pattern = re.compile(r'\d{3}[-]\d{3}[-]\d{4}') # instead of writing every digit, we can use quntifiers to specify howmany times a character exist
 #pattern = re.compile(r'[1-5]') # when the - is in middle of characters it tells the range in this case 1 to 5, or [a-zA-Z] (the range of all lower or uper case letters). if its in the beginning or ending it find the character - litrally
 #pattern = re.compile(r'[^a-zA-Z]') #if we use the carat^ before the set ^[], all characters that start in the charcters in the set. if it is inside the set[^ ] it negates, i.e. all character that NOT start in the character set
-pattern = re.compile(r'[a-zA-Z0-9.-]+@[a-zA-Z-]+[.](com|edu|net)') # it result one or more characters in small or upper case or a dot or digits or hyphen till it find @ and again one or more characters in small or upper case or hyphen till it find . and one of the group com or edu or net at the end
+#pattern = re.compile(r'[a-zA-Z0-9.-]+@[a-zA-Z-]+[.](com|edu|net)') # it result one or more characters in small or upper case or a dot or digits or hyphen till it find @ and again one or more characters in small or upper case or hyphen till it find . and one of the group com or edu or net at the end
+pattern = re.compile(r'([a-zA-Z0-9.-]+)@([a-zA-Z-]+)(\.com|edu|net)') #resulted the same as above but we grouped part of the email together i.e the charachters before the @, the email provider, the domain with the dot which is escaped
+# now we can access each group or the whole email using a group method. group(0) is the whole email. group(1) is the 1st group, group(2) the second...
+
 with open('data.txt', 'r') as f:
   contents = f.read()
   matches = pattern.finditer(contents)
   for match in matches:
-    print(match)
+    #print(match)
+    print(match.group(0))

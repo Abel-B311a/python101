@@ -44,11 +44,25 @@ pattern = re.compile(r'([a-zA-Z0-9.-]+)@([a-zA-Z-]+)(\.com|edu|net)') #resulted 
 
 with open('data.txt', 'r') as f:
   contents = f.read()
-  matches = pattern.finditer(contents)
+  matches = pattern.findall(contents) 
   for match in matches:
     print(match)
-    #print(match.group(0))
+    #print(match.group(1))
+    
 
 # back refrance using a sub method
-Subbed_urls = pattern.sub(r'\1\2', contents)
+#subbed_urls = pattern.sub(r'\1', matches)
+#print(subbed_urls)
+    
+# finditer - shows all of the matches and the location of the matches 
+# findall - return tuples of only the groups inside it, if there is no group it will return all of the matches in a list of strings 
+# match - return if the fisrst character or sentence is matched,,, doesnt work in loops
+# search - return the 1st character or sentece it finds among the whole(not of the 1st charcter ot sentence like match)
+
+# a flag to ignore case sensetive search
+    pattern = re.compile(r'start', re.IGNORECASE) # it will find start, whether its upercase or not can be shoted tp re.I
+#In regex, the re.VERBOSE flag is used to improve the readability of your regular expressions. When enabled, it allows you to:
+    #nclude whitespace and comments within your pattern without affecting the matching behavior. This can make your regexes more visually clear and easier to understand.
+    #Use newlines for better formatting, making your expressions less dense and easier to navigate.
+
 

@@ -46,5 +46,9 @@ with open('data.txt', 'r') as f:
   contents = f.read()
   matches = pattern.finditer(contents)
   for match in matches:
-    #print(match)
-    print(match.group(0))
+    print(match)
+    #print(match.group(0))
+
+# back refrance using a sub method
+Subbed_urls = pattern.sub(r'\1\2', contents)
+

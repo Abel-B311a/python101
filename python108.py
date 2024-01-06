@@ -23,7 +23,7 @@ b[:,1] = 9 # to change the whole column with same value
 b[1,:] = [85,22,19] # to change the whole row with specified values
 print(b)
 # 3d
-d = np.array([[[a,b,c],[d,e,f]],[[g,h,i],[j,k,l]]]) 
+d = np.array([[[1,2,3],[4,5,6]],[[7,8,9],[10,11,12]]]) 
 print(d.shape)
 # to access an element
 print(d[0,0,1])
